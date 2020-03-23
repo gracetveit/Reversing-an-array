@@ -7,7 +7,14 @@ const reverseArray = function (list) {
 }
 
 const reverseArrayInPlace = function (list) {
-    // Need to really work on this
+    let newArray = [];
+     for (let i = list.length - 1; i >= 0; i--) {
+        newArray.push(list[i]);
+        list.pop();
+    }
+    for (let i of newArray) {
+        list.push(i)
+    }
 }
 
 console.log(reverseArray(["A", "B", "C"]));
